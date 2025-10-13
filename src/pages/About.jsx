@@ -52,7 +52,7 @@ function FlipCard({ card }) {
           transition-all duration-300`}
         onClick={toggleFlip}
       >
-        {/* 💬 Le wrapper perspective reste, mais ne porte PAS les ombres */}
+        
         <div className="h-full w-full [perspective:1000px]">
           <div
             className={`relative h-full w-full rounded-2xl
@@ -60,7 +60,7 @@ function FlipCard({ card }) {
               [transform-style:preserve-3d]
               ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
           >
-            {/* FACE AVANT */}
+            
             <div
               className="absolute inset-0 flex flex-col p-4 justify-between"
               style={{ backfaceVisibility: "hidden" }}
@@ -78,7 +78,6 @@ function FlipCard({ card }) {
                     <img
                       src={card.src}
                       alt={card.alt || ""}
-                      // 💬 Petit zoom visuel au hover pour renforcer l’interactivité
                       className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
@@ -98,10 +97,9 @@ function FlipCard({ card }) {
               </div>
 
               <div className="flex items-center justify-between text-xs text-gray-400 mt-3">
-                <span className="truncate">{card.footerLeft}</span>
-                <span className="flex items-center gap-1">
-                  {card.footerRight}
-                  
+                <span className="truncate max-w-[50%]">{card.footerLeft}</span>
+                <span className="flex items-center gap-1 text-gray-900">
+                  Cliquez pour retourner
                 </span>
               </div>
             </div>
@@ -216,7 +214,6 @@ const experiencesCards = [
     flippable: true,
     description:
       "Travail personnel pour des clients tels que l'entreprise de mon père Wo-Dell Sàrl ou le salon de Coline (salon de coiffure pour lequel je refais le site web actuellement). J'apprends continuellement à utiliser les technologies les plus récentes afin de proposer un service rapide et qualitatif.",
-      
   },
 ];
 
@@ -294,8 +291,7 @@ const diplomasCards = [
     alt: "IMACOM",
     title: "IMACOM",
     metaRight: "Diplôme d'assistant Marketing",
-    footerLeft:
-      "Marketing stratégique",
+    footerLeft: "Marketing stratégique",
     footerRight: "2023",
     mediaHeight: "h-[300px]",
     flippable: true,
@@ -320,20 +316,18 @@ const diplomasCards = [
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col py-8 px-4 space-y-14">
-      
       <section className="mx-auto w-full max-w-5xl">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="grid gap-6 md:grid-cols-5">
-            
             {/* Colonne gauche : titre + sous-titre discrets */}
             <div className="md:col-span-2 flex flex-col items-center justify-center space-y-6 text-center py-4">
-
               <h1 className="text-2xl font-semibold tracking-tight justify-center">
                 Victor Wojciechowski
               </h1>
-              <img src= {logo} className="h-[220px]" ></img>
+              <img src={logo} className="h-[220px]"></img>
               <p className="text-sm text-gray-500">
-                Étudiant en dernière année d'ingénierie des médias · spécialisation en développement web backend.
+                Étudiant en dernière année d'ingénierie des médias ·
+                spécialisation en développement web backend.
               </p>
 
               {/* Icônes sociales */}
@@ -405,9 +399,7 @@ export default function About() {
                   className="rounded-full border border-gray-200 px-2.5 py-1 text-xs text-grey-600 hover:shadow-2xl hover:-translate-y-1
           transition-all duration-300"
                 >
-                  <a href="mailto:victorwoj6@gmail.com">
-                    M'envoyer un e-mail
-                  </a>
+                  <a href="mailto:victorwoj6@gmail.com">M'envoyer un e-mail</a>
                 </span>
               </div>
             </div>

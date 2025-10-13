@@ -1,4 +1,3 @@
-
 import entretien from "../assets/entretien_resized.png";
 import breitling from "../assets/macbook_breitling.png";
 import lego from "../assets/macbook_lego_resized.png";
@@ -20,7 +19,6 @@ import challengeday1 from '../assets/challengeday1.png';
 import journalsm from '../assets/journal.png';
 import journalwritinginterface from '../assets/journalwritinginterface.png';
 import profile from '../assets/profile.png';
-
 
 
 export const projects = [
