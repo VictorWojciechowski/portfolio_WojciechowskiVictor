@@ -1,3 +1,4 @@
+
 import entretien from "../assets/entretien_resized.png";
 import breitling from "../assets/macbook_breitling.png";
 import lego from "../assets/macbook_lego_resized.png";
@@ -54,7 +55,7 @@ export const projects = [
     ],
 
     links: {
-      code: "https://github.com/ProjArtBAMAgency/ProjArtBamAgency.git",
+      code: "https://github.com/ProjArtBAMAgency/ProjArtBamAgency",
       demo: "https://www.nova-league.com/",
     },
   },

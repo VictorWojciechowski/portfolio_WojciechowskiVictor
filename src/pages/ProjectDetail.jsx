@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { projects } from "../data/projects";
 import ProjectNotes from "../components/ProjectNotes";
 import GalleryProject from "../components/GalleryProject";
+import { FaGithub } from "react-icons/fa";
 
 
 export default function ProjectDetail() {
@@ -74,29 +75,29 @@ export default function ProjectDetail() {
         {project.notes && <ProjectNotes notes={project.notes} />}
 
         {(project.links?.code || project.links?.demo) && (
-          <div className="flex gap-4 pt-2">
-            {project.links?.code && (
-              <a
-                className="underline"
-                href={project.links.code}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Voir le code
-              </a>
-            )}
-            {project.links?.demo && (
-              <a
-                className="underline"
-                href={project.links.demo}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Demo live
-              </a>
-            )}
-          </div>
-        )}
+  <div className="flex gap-4 pt-4">
+    {project.links?.code && (
+      <a
+        href={project.links.code}
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center justify-center gap-2 px-6 py-2 min-w-[140px] bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+      >
+        <FaGithub /> Voir le code
+      </a>
+    )}
+    {project.links?.demo && (
+      <a
+        href={project.links.demo}
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center justify-center gap-2 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition"
+      >
+        Demo live
+      </a>
+    )}
+  </div>
+)}
       </section>
     </article>
   );

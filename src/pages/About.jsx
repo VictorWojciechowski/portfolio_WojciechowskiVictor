@@ -333,7 +333,7 @@ export default function About() {
               </h1>
               <img src= {logo} className="h-[220px]" ></img>
               <p className="text-sm text-gray-500">
-                Étudiant en dernière année d'ingénierie des médias · HEIG-VD
+                Étudiant en dernière année d'ingénierie des médias · spécialisation en développement web backend.
               </p>
 
               {/* Icônes sociales */}
