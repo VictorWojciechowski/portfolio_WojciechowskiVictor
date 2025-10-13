@@ -156,7 +156,6 @@ export const projects = [
       demo: "https://wwwordlevw.netlify.app/",
     },
   },
-
   {
     id: "Aero",
     title: "Aero2 website",
