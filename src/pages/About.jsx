@@ -340,7 +340,7 @@ export default function About() {
               <div className="flex items-center gap-4 pt-1">
                 {/* GitHub */}
                 <a
-                  href="https://github.com/ViElChompo"
+                  href="https://github.com/VictorWojciechowski"
                   target="_blank"
                   rel="noreferrer"
                   className="text-gray-400 hover:text-gray-700 transition-colors"
