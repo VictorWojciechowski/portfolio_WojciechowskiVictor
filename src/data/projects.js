@@ -6,7 +6,21 @@ import aeroDark from "../assets/dark_aero.png";
 import aeroLight from "../assets/light_aero.png";
 import aeroIpad from "../assets/aero_ipad.png";
 import aeroLastPage from "../assets/aero.png";
-import stoic from '../assets/stoic_mind.png'
+import stoic from '../assets/stoic_mind.png';
+import splashsm from '../assets/splashscreen.png';
+import loginsm from '../assets/login.png';
+import signupsm from '../assets/signup.png';
+import usermistakesm from '../assets/usermistake.png';
+import homepagesm from '../assets/homepage.png';
+import dailyquotessm from '../assets/dailyquotes.png';
+import overlaychallengeitemssm from '../assets/overlaychallengeitems.png';
+import challengeitemsm from '../assets/challengeitem.png';
+import challengeday1 from '../assets/challengeday1.png';
+import journalsm from '../assets/journal.png';
+import journalwritinginterface from '../assets/journalwritinginterface.png';
+import profile from '../assets/profile.png';
+
+
 
 export const projects = [
   {
@@ -170,4 +184,32 @@ export const projects = [
     ],
     techStack: ["Figma", "Wireframes", "UX Research"],
   },
+
+  // {
+  //   id: "Stoic Mind",
+  //   title: "Stoic Mind App",
+  //   year: "2025",
+  //   category: "UX • UI ",
+  //   type: "gallery",
+  //   cover: stoic,
+  //   images: [
+  //     {
+  //       src: splashsm,
+  //       alt: "Page d’accueil présentant la plateforme Aero2 et son concept : une aide innovante pour optimiser l’aérodynamisme et la dépense énergétique des cyclistes.",
+  //     },
+  //     {
+  //       src: loginsm,
+  //       alt: "Interface centrale permettant d’analyser l’impact réel d’un équipement sur la performance : watts économisés, compatibilité et confort.",
+  //     },
+  //     {
+  //       src: signupsm,
+  //       alt: "Espace utilisateur avec modélisation 3D personnalisée, regroupant mensurations, vélo et recommandations adaptées pour un suivi précis.",
+  //     },
+  //     {
+  //       src: usermistakesm,
+  //       alt: "Système de recommandations personnalisées : en fonction des mensurations et du vélo de l’utilisateur, Aero2 propose les pièces les plus adaptées pour optimiser l’aérodynamisme, le confort et l’économie d’énergie.",
+  //     },
+  //   ],
+  //   techStack: ["Figma", "Wireframes", "UX Research"],
+  // },
 ];
