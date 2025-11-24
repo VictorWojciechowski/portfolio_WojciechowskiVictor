@@ -52,7 +52,6 @@ function FlipCard({ card }) {
           transition-all duration-300`}
         onClick={toggleFlip}
       >
-        
         <div className="h-full w-full [perspective:1000px]">
           <div
             className={`relative h-full w-full rounded-2xl
@@ -60,7 +59,6 @@ function FlipCard({ card }) {
               [transform-style:preserve-3d]
               ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
           >
-            
             <div
               className="absolute inset-0 flex flex-col p-4 justify-between"
               style={{ backfaceVisibility: "hidden" }}
@@ -326,8 +324,7 @@ export default function About() {
               </h1>
               <img src={logo} className="h-[220px]"></img>
               <p className="text-sm text-gray-500">
-                Étudiant en dernière année d'ingénierie des médias ·
-                spécialisation en développement web backend.
+                Étudiant en dernière année d'ingénierie des médias
               </p>
 
               {/* Icônes sociales */}
@@ -377,18 +374,16 @@ export default function About() {
             {/* Colonne centrale : description courte + méta */}
             <div className="md:col-span-2 flex flex-col justify-center space-y-4">
               <p className="text-[15px] leading-relaxed text-gray-600">
-                Je conçois des expériences web claires et performantes, à
-                l’intersection du design, du code et de la donnée. Intérêt pour
-                le backend et les interfaces soignées. Actuellement à la
-                recherche d’un
-                <span className="font-medium"> projet de Bachelor</span> en{" "}
-                <span className="font-medium">développement web</span> /{" "}
-                <span className="font-medium">développement backend</span>, avec
-                un attrait pour la{" "}
-                <span className="font-medium">
-                  valorisation du patrimoine horloger
-                </span>
-                .
+                En formation d’ingénieur médias, j’apprends à créer des
+                expériences web complètes en alliant design, développement et
+                données. Intéressé par le développement backend et la mise en
+                valeur de projets numériques j'ai, en parallèle de ces études, obtenu le diplôme
+                d’assistant marketing IMACOM. Je recherche aujourd’hui une
+                entreprise avec laquelle collaborer sur mon{" "}
+                <span className="font-medium">travail de Bachelor</span>, où je
+                pourrais mobiliser l’ensemble de mes compétences, de la
+                planification et du design à la création et à la promotion du
+                produit.
               </p>
 
               <div className="flex flex-wrap items-center gap-2">
