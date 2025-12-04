@@ -36,23 +36,22 @@ function CardsGrid({ cards }) {
 function FlipCard({ card }) {
   const [flipped, setFlipped] = useState(false);
 
-const hintRef = useRef(null);
+  const hintRef = useRef(null);
 
   useEffect(() => {
-  if (!hintRef.current || flipped) return;
+    if (!hintRef.current || flipped) return;
 
-  animate(hintRef.current, {
-  duration: 2000,
-  loop: true,
-  easing: "easeInOutSine",
-  direction: "alternate",
-  keyframes: [
-    { scale: 0.9, opacity: 1 },
-    { scale: 1.15, opacity: 0.9 },
-  ]
-});
-}, [flipped]);
-
+    animate(hintRef.current, {
+      duration: 2000,
+      loop: true,
+      easing: "easeInOutSine",
+      direction: "alternate",
+      keyframes: [
+        { scale: 0.9, opacity: 1 },
+        { scale: 1.15, opacity: 0.9 },
+      ],
+    });
+  }, [flipped]);
 
   const span = card.span ?? "";
   const mediaH = card.mediaHeight ?? "h-[400px]";
@@ -116,7 +115,10 @@ const hintRef = useRef(null);
 
               <div className="flex items-center justify-between text-xs text-gray-400 mt-3">
                 <span className="truncate max-w-[50%]">{card.footerLeft}</span>
-                <span ref={hintRef} className="flex items-center gap-1 text-gray-900">
+                <span
+                  ref={hintRef}
+                  className="flex items-center gap-1 text-gray-900"
+                >
                   Cliquez pour retourner
                 </span>
               </div>
@@ -393,17 +395,16 @@ export default function About() {
 
             {/* Colonne centrale : description courte + méta */}
             <div className="md:col-span-2 flex flex-col justify-center space-y-4">
-              <p className="text-[15px] leading-relaxed text-gray-600">
-                En formation d’ingénieur médias, j’apprends à créer des
-                expériences web complètes en alliant design, développement et
-                données. Intéressé par le développement backend et la mise en
-                valeur de projets numériques j'ai, en parallèle de ces études, obtenu le diplôme
-                d’assistant marketing IMACOM. Je recherche aujourd’hui une
-                entreprise avec laquelle collaborer sur mon{" "}
-                <span className="font-medium">travail de Bachelor</span>, où je
-                pourrais mobiliser l’ensemble de mes compétences, de la
-                planification et du design à la création et à la promotion du
-                produit.
+              <p class="text-[15px] leading-relaxed text-gray-600">
+                Étudiant en dernière année à la HEIG-VD, je m’intéresse au
+                développement web et aux solutions MarTech qui permettent
+                d’automatiser et d’améliorer les expériences digitales. Mon
+                parcours combine une formation en ingénierie des médias et un
+                diplôme IMACOM en marketing, ce qui me donne une vision à la
+                fois technique et stratégique des projets. Je recherche
+                aujourd’hui une entreprise avec laquelle réaliser mon{" "}
+                <span class="font-medium"> travail de Bachelor</span> et
+                contribuer à un projet concret.
               </p>
 
               <div className="flex flex-wrap items-center gap-2">
