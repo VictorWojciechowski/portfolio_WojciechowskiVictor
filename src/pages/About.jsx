@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import portrait from "../assets/golf.jpg";
 import { Link } from "react-router-dom";
+import { animate } from "animejs";
 import malaga from "../assets/malaga.jpg";
 import velodrome from "../assets/velodrome.mp4";
 import imacom from "../assets/imacom.png";
@@ -34,6 +35,25 @@ function CardsGrid({ cards }) {
 
 function FlipCard({ card }) {
   const [flipped, setFlipped] = useState(false);
+
+const hintRef = useRef(null);
+
+  useEffect(() => {
+  if (!hintRef.current || flipped) return;
+
+  animate(hintRef.current, {
+    duration: 900,
+    direction: "alternate",
+    loop: true,
+    easing: "easeInOutSine",
+    keyframes: [
+      { scale: 1, opacity: 0.6 },
+      { scale: 1.06, opacity: 1 },
+    ],
+  });
+}, [flipped]);
+
+
   const span = card.span ?? "";
   const mediaH = card.mediaHeight ?? "h-[400px]";
   const isFlippable = card.flippable && card.description;
@@ -96,7 +116,7 @@ function FlipCard({ card }) {
 
               <div className="flex items-center justify-between text-xs text-gray-400 mt-3">
                 <span className="truncate max-w-[50%]">{card.footerLeft}</span>
-                <span className="flex items-center gap-1 text-gray-900">
+                <span ref={hintRef} className="flex items-center gap-1 text-gray-900">
                   Cliquez pour retourner
                 </span>
               </div>
