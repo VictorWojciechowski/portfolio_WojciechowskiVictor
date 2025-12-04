@@ -42,15 +42,15 @@ const hintRef = useRef(null);
   if (!hintRef.current || flipped) return;
 
   animate(hintRef.current, {
-    duration: 900,
-    direction: "alternate",
-    loop: true,
-    easing: "easeInOutSine",
-    keyframes: [
-      { scale: 1, opacity: 0.6 },
-      { scale: 1.06, opacity: 1 },
-    ],
-  });
+  duration: 2000,
+  loop: true,
+  easing: "easeInOutSine",
+  direction: "alternate",
+  keyframes: [
+    { scale: 0.9, opacity: 1 },
+    { scale: 1.15, opacity: 0.9 },
+  ]
+});
 }, [flipped]);
 
 
